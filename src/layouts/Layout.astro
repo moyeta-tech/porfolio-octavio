@@ -31,6 +31,14 @@ import '@fontsource-variable/onest'
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		height: 100vh;
 	}
+	a {
+		transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+	}
+
+	a:hover {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+	
 </style>
