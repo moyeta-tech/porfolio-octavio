@@ -1,28 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import GitHubIcon from '../icons/GitHub.astro';
+import SocialButton from '../icons/SocialButtons.astro';
+import MailIcon from '../icons/Mail.astro';
+import ProjectsLine from '../components/Projects.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<section class="w-full mx-auto lg:w-[740px] py-44">
-
-		<main>
+<Layout title="Porfolio Octavio - Desarrollador Web FrontEnd">
+	<main>
+		<SectionContainer class="py-44 pb-20">
+			<img class="rounded-full size-15 mb-4" src="https://avatars.githubusercontent.com/u/65986931?v=4" 
+			alt="octavio photo">
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-				Hi, I am Octavio <a href="https://www.linkedin.com/in/octavio-moya/" 
+				Hola, soy Octavio <a href="https://www.linkedin.com/in/octavio-moya/" 
 				target="_blank" 
 				class="flex justify-center items-center"
 				rel="noopener">
 					 <Badge>Disponible para trabajar</Badge> 
 				</a>
 			</h1>
-			<h2 class="text-xl opacity-80">
-				+1 año de experiencia. Desarrollador web Jr en formación y Editor de Videos. De 
+			<h2 class="text-2xl opacity-80 text-wrap">
+				<span class="text-blue-600">Desarrollador web Jr en formación y Editor de Videos</span>. De 
 				La Rioja, Argentina. Apasionado por la creación y el diseño de aplicaciones web.  
 			</h2>
-		</main>
+			<nav class="flex gap-x-6 mt-4">
+				<SocialButton href="https://www.linkedin.com/in/octavio-moya/">
+					<LinkedInIcon class="size-6"/>
+						LinkedIn
+				</SocialButton>
+				<SocialButton href="https://github.com/moyeta-tech">
+					<GitHubIcon class="size-6"/>
+						GitHub
+				</SocialButton>
+				<SocialButton href="https://github.com/moyeta-tech">
+					<MailIcon class="size-6"/>
+						octaviomoya05@gmail.com
+				</SocialButton>
+			</nav>	
+		</SectionContainer>
 
-	</section>
+		<SectionContainer>
+			<h2 class="text-3xl font-semibold mb-5">Proyectos Personales</h2>
+			<ProjectsLine />
+		</SectionContainer>
+	</main>
 </Layout>
