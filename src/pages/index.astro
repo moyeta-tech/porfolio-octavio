@@ -7,6 +7,7 @@ import SocialButton from '../icons/SocialButtons.astro';
 import MailIcon from '../icons/Mail.astro';
 import ProjectsLine from '../components/Projects.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+import CodeIcon from '../icons/Code.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -38,15 +39,18 @@ import SectionContainer from '../components/SectionContainer.astro';
 					<GitHubIcon class="size-6"/>
 						GitHub
 				</SocialButton>
-				<SocialButton href="https://github.com/moyeta-tech">
+				<SocialButton href="mailto:octaviomoya05@gmail.com">
 					<MailIcon class="size-6"/>
 						octaviomoya05@gmail.com
 				</SocialButton>
 			</nav>	
 		</SectionContainer>
 
-		<SectionContainer>
-			<h2 class="text-3xl font-semibold mb-5">Proyectos Personales</h2>
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-5 items-center flex gap-x-4">
+				<CodeIcon class="size-8" />
+				Proyectos Personales
+			</h2>
 			<ProjectsLine />
 		</SectionContainer>
 	</main>

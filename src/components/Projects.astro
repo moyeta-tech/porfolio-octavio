@@ -1,21 +1,66 @@
 ---
 import ProjectItems from '../components/ProjectsItems.astro';
 
+import MongoDBIcon from '../icons/MongoDB.astro';
+import AstroIcon from '../icons/Astro.astro';
+import TailwindIcon from '../icons/TailwindCSS.astro';
+import ExpressIcon from '../icons/ExpressJS.astro';
+import BootstrapIcon from '../icons/Bootstrap.astro';
+
+const tags = {
+    ASTRO: {
+        name: "Astro",
+        class: "bg-black-800 text-white",
+        icon: AstroIcon
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class: "bg-[#003159] text-white",
+        icon: TailwindIcon
+    },
+    EXPRESS: {
+        name: "Express",
+        class: "bg-black text-white",
+        icon: ExpressIcon
+    },
+    MONGODB: {
+        name: "MongoDB",
+        class: "bg-green-700 text-white",
+        icon: MongoDBIcon
+        
+    },
+    BOOTSTRAP: {
+        name: "Bootstrap",
+        class: "bg-white text-violet-700",
+        icon: BootstrapIcon
+    }
+}
+
 const project = [
     {
-        title: "Application UI code in Tailwind CSS",
-        description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+        title: "Aplicación de Cine en C++",
+        description: 
+        `Es un programa desarrollado en C + + con Qt para gestionar los clientes y las ventas de un cine. 
+        Permite registrar clientes, empleados y películas, usando archivos CSV para almacenamiento.`,
         link: "#"
     }, 
     {
-        title: "Marketing UI design in Figma",
-        description: "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
-        link: "#"
+        title: "Pagina de Libros sobre Programación con Astro y Tailwind CSS",
+        description:
+        `Es una página en la que hay algunos libros de programación y se puede interactuar con ellos, ya sea para saber 
+        más información que a su vez también tiene un enlace de compra que te redirige a Amazon para poder 
+        comprarlo.`,
+        link: "#",
+        tags: [tags.ASTRO, tags.TAILWIND]
     },
     {
-        title: "E-Commerce UI code in Tailwind CSS",
-        description: "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
-        link: "#"
+        title: "Tienda Online con NodeJS, ExpressJS, MongoDB y Bootstrap",
+        description: 
+        `Junto con mi grupo de la universidad, preparamos una aplicación web que sirve para gestionar el stock de una 
+        tienda de productos electrónicos, permitiéndonos agregar, eliminar, modificar y ver la información de 
+        productos, clientes y pedidos. Lo realizamos para presentar como trabajo final en la materia de base de datos.`,
+        link: "https://bazardito.onrender.com/",
+        tags: [tags.EXPRESS, tags.MONGODB, tags.BOOTSTRAP]
     }
         ]
 ---
@@ -26,6 +71,7 @@ const project = [
         project.map((project) => (
             <li class="mb-10 ms-4">
                 <ProjectItems {...project}/>
+
             </li>
         ))}
 </ol>
