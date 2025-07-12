@@ -1,0 +1,22 @@
+---
+import PersonIcon from "../icons/Person.astro";
+const { id } = Astro.props;
+---
+
+<div class="text-3xl mb-5 items-center gap-x-4" id={id}>
+    <h1 class="flex flex-row gap-x-2 items-center mb-5 font-semibold"><PersonIcon class="size-10" /> Sobre mí</h1>
+    <p class="text-xl text-white/80 text-pretty">Mi nombre es <span class="text-blue-500/80 text-2xl"><code>Octavio Moya</code></span>, tengo 19 años
+        y actualmente me encuentro estudiando y formandome como <span class="text-blue-400/80 "><code>Desarrollador</code></span>. 
+        <br /> <br />
+        Desde que soy chico, me llama la atención el mundo de la tecnología y 
+        el hecho de <span class="text-blue-400/80 "><code>saber como se crean y funcionan 
+        las cosas que usamos a diario</code></span>, ya sean videojuegos,
+        aplicaciones, sitios web, etc. 
+        <br /> <br />
+        Me gusta aprender cosas nuevas y <span class="text-blue-400/80 "><code>Siempre estoy buscando 
+        mejorar mis habilidades</code></span>.
+        Por eso decidí estudiar y formarme como Desarrollador Web FrontEnd.
+
+
+    </p>
+</div>

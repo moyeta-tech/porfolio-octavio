@@ -7,7 +7,7 @@ interface Props {
     tags?: {
         name: string;
         class: string;
-        icon: any; // Icon component
+        icon: any;
     }[];
 }
 
@@ -38,7 +38,7 @@ const { title, description, link, tags = [] } = Astro.props;
             focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 
             dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 
             dark:focus:ring-gray-700"
-            >
+            target="_blank" rel="noopener noreferrer">
                 Saber más...{" "} 
                 <svg class="w-3 h-3 ms-2 rtl:rotate-180" 
                 aria-hidden="true" 
