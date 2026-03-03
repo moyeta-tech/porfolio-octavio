@@ -1,62 +1,77 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import LinkedInIcon from '../icons/LinkedIn.astro';
-import GitHubIcon from '../icons/GitHub.astro';
-import SocialButton from '../icons/SocialButtons.astro';
-import MailIcon from '../icons/Mail.astro';
-import ProjectsLine from '../components/Projects.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import CodeIcon from '../icons/Code.astro';
-import About from '../components/About.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import SocialButton from "../icons/SocialButtons.astro";
+import MailIcon from "../icons/Mail.astro";
+import ProjectsLine from "../components/Projects.astro";
+import ExperienceCard from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import CodeIcon from "../icons/Code.astro";
+import WorkBag from "../icons/WorkBag.astro";
+import About from "../components/About.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Porfolio Octavio - Desarrollador Web FrontEnd">
-	<main>
-		<SectionContainer class="py-44 pb-20">
-			<img class="rounded-full size-15 mb-4" src="https://avatars.githubusercontent.com/u/65986931?v=4" 
-			alt="octavio photo">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-				Hola, soy Octavio <a href="https://www.linkedin.com/in/octavio-moya/" 
-				target="_blank" 
-				class="flex justify-center items-center"
-				rel="noopener">
-					 <Badge>Disponible para trabajar</Badge> 
-				</a>
-			</h1>
-			<h2 class="text-2xl opacity-80 text-wrap">
-				<span class="text-blue-600">Desarrollador web Jr en formación y Editor de Videos</span>. De 
-				La Rioja, Argentina. Apasionado por la creación y el diseño de aplicaciones web.  
-			</h2>
-			<nav class="flex gap-x-6 mt-4">
-				<SocialButton href="https://www.linkedin.com/in/octavio-moya/">
-					<LinkedInIcon class="size-6"/>
-						LinkedIn
-				</SocialButton>
-				<SocialButton href="https://github.com/moyeta-tech">
-					<GitHubIcon class="size-6"/>
-						GitHub
-				</SocialButton>
-				<SocialButton href="mailto:octaviomoya05@gmail.com">
-					<MailIcon class="size-6"/>
-						octaviomoya05@gmail.com
-				</SocialButton>
-			</nav>	
-		</SectionContainer>
+  <main>
+    <SectionContainer class="py-44 pb-20">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+        Hola, soy Octavio <a
+          href="https://www.linkedin.com/in/octavio-moya/"
+          target="_blank"
+          class="flex justify-center items-center"
+          rel="noopener"
+        >
+          <Badge
+            id="shine"
+            class="text-blue-400 text-sm font-medium me-2 px-2.5 py-0.5 rounded-xl dark:text-black-300"
+            >Disponible para trabajar</Badge
+          >
+        </a>
+      </h1>
+      <h2 class="text-2xl opacity-80 text-wrap">
+        <span class="text-blue-600"
+          >Programador web Frontend Jr en formación</span
+        >. De La Rioja, Argentina. Interesado por la creación y el diseño de
+        aplicaciones web.
+      </h2>
+      <nav class="flex gap-x-6 mt-4">
+        <SocialButton href="https://www.linkedin.com/in/octavio-moya/">
+          <LinkedInIcon class="size-6" />
+          LinkedIn
+        </SocialButton>
+        <SocialButton href="https://github.com/moyeta-tech">
+          <GitHubIcon class="size-6" />
+          GitHub
+        </SocialButton>
+        <SocialButton href="mailto:octaviomoya05@gmail.com">
+          <MailIcon class="size-6" />
+          octaviomoya05@gmail.com
+        </SocialButton>
+      </nav>
+    </SectionContainer>
 
-		<SectionContainer id="proyectos">
-			<h2 class="text-3xl font-semibold mb-5 items-center flex gap-x-4">
-				<CodeIcon class="size-8" />
-				Proyectos Personales
-			</h2>
-			<ProjectsLine />
-		</SectionContainer>
-			<SectionContainer class="py-10">
-				<About id="sobre-mi"/>
-			</SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-5 items-center flex gap-x-4">
+        <WorkBag class="size-8" />
+        Experiencia Laboral
+      </h2>
+      <ExperienceCard />
+    </SectionContainer>
 
-	</main>
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-5 items-center flex gap-x-4">
+        <CodeIcon class="size-8" />
+        Proyectos Personales
+      </h2>
+      <ProjectsLine />
+    </SectionContainer>
+    <SectionContainer class="py-10">
+      <About id="sobre-mi" />
+    </SectionContainer>
+  </main>
 </Layout>

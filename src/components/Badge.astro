@@ -1,4 +1,12 @@
-<span id="shine" class="text-blue-400 text-sm font-medium 
-me-2 px-2.5 py-0.5 rounded-xl dark:text-black-300">
+---
+interface Props {
+    id?: string;
+    class?: string;
+}
+
+const { id, class: className } = Astro.props;
+---
+
+<span id={id} class={className}>
     <slot />
 </span>
