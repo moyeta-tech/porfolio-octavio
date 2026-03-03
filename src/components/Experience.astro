@@ -1,0 +1,30 @@
+---
+import ExperienceItems from "./ExperienceItems.astro";
+
+const trabajos = [
+  {
+    title: "Programador Web Fullstack Jr",
+    description:
+      "En esta empresa me desempeñé como programador web fullstack, trabajando principalmente con tecnologías como HTML, CSS, JavaScript para el desarrollo de aplicaciones web. Además, tuve la oportunidad de colaborar utilizando NodeJS y ExpressJS para el backend, así como MongoDB para la gestión de bases de datos. Durante mi tiempo en esta empresa, adquirí experiencia en el desarrollo de interfaces de usuario atractivas y funcionales, así como en la implementación de soluciones eficientes para el manejo de datos y la lógica del servidor.",
+    company: "Aberlar",
+    dateIn: "Agosto 2025",
+    dateOut: "Enero 2026",
+  },
+  {
+    title: "Programador Web Frontend Jr",
+    description:
+      "En esta empresa me encuentro como programador web frontend, enfocándome en el desarrollo de interfaces de usuario utilizando tecnologías como React, HeroUI, SwiperJS. Voy ganando experiencia en la implementación de diseños atractivos y funcionales, así como en la optimización del rendimiento y la usabilidad de las aplicaciones web.",
+    company: "EMSE",
+    dateIn: "Enero 2026",
+    dateOut: "Actualmente"
+  },
+  
+];
+---
+
+<div class="grid grid-cols-2 gap-x-[80px] mb-10">
+  {trabajos.map((trabajo) => (
+    <ExperienceItems
+      {...trabajo}
+    />
+  ))}
